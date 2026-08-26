@@ -1,0 +1,4 @@
+id,fecha_hora,calle_1,calle_2,latitud,longitud,tipo_siniestro,gravedad
+1,2026-08-10 08:30:00,Av. Uruguay,Av. Quaranta,-27.3985,-55.9012,Colision,Moderado
+2,2026-08-12 19:15:00,Av. Corrientes,Av. Centenario,-27.3681,-55.8964,Atropello,Grave
+3,2026-08-15 14:00:00,Av. San Martin,Av. Urquiza,-27.3750,-55.9120,Colision,Leve
