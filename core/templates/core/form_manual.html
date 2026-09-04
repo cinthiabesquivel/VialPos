@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carga Manual de Siniestro</title>
+</head>
+<body>
+    <h1>Registrar Siniestro Manualmente</h1>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label>Ubicación / Intersección (ej: San Martín y Colón):</label><br>
+            <input type="text" name="calle_1" required style="width: 300px;">
+        </div>
+        <br>
+        <div>
+            <label>Tipo de Siniestro:</label><br>
+            <input type="text" name="tipo_siniestro" value="Colisión" required>
+        </div>
+        <br>
+        <div>
+            <label>Detalles / Fuente:</label><br>
+            <textarea name="descripcion"></textarea>
+        </div>
+        <br>
+        <button type="submit">Buscar Coordenadas y Guardar</button>
+    </form>
+    <br>
+    <a href="/">Volver al Mapa</a>
+</body>
+</html>

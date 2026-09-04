@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c56bcc46122729a72db835a8c4d8c9ca {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c56bcc46122729a72db835a8c4d8c9ca" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c56bcc46122729a72db835a8c4d8c9ca = L.map(
+                "map_c56bcc46122729a72db835a8c4d8c9ca",
+                {
+                    center: [-27.38, -55.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4d625067c1e8af402e7ffd6572150872 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4d625067c1e8af402e7ffd6572150872.addTo(map_c56bcc46122729a72db835a8c4d8c9ca);
+        
+    
+            var marker_1fdd23a37f27dd8aac45a5aeea75675e = L.marker(
+                [-27.398, -55.918],
+                {
+}
+            ).addTo(map_c56bcc46122729a72db835a8c4d8c9ca);
+        
+    
+            var icon_6a91c0847f7960edda969a1030d71333 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bceb6f42f13a10c789799d49725b9fd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2217bd2113da2395e79703d62964aa9a = $(`<div id="html_2217bd2113da2395e79703d62964aa9a" style="width: 100.0%; height: 100.0%;">         <b>Hotspot #1</b><br>         <b>ID:</b> #1<br>         <b>Ubicación:</b> Av. Quaranta y Av. San Martín<br>         <b>Tipo:</b> Colision         </div>`)[0];
+                popup_bceb6f42f13a10c789799d49725b9fd2.setContent(html_2217bd2113da2395e79703d62964aa9a);
+            
+        
+
+        marker_1fdd23a37f27dd8aac45a5aeea75675e.bindPopup(popup_bceb6f42f13a10c789799d49725b9fd2)
+        ;
+
+        
+    
+    
+                marker_1fdd23a37f27dd8aac45a5aeea75675e.setIcon(icon_6a91c0847f7960edda969a1030d71333);
+            
+    
+            var marker_21408fa16bd8802aaddfb87ecbe08538 = L.marker(
+                [-27.3982, -55.9182],
+                {
+}
+            ).addTo(map_c56bcc46122729a72db835a8c4d8c9ca);
+        
+    
+            var icon_3e63ac303e0bd4188225cf6a088b7049 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_931bbc27c2369dc3b698298f658c99a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f8ccfd046b0aacf0921be7bfefdeb4e = $(`<div id="html_5f8ccfd046b0aacf0921be7bfefdeb4e" style="width: 100.0%; height: 100.0%;">         <b>Hotspot #1</b><br>         <b>ID:</b> #2<br>         <b>Ubicación:</b> Av. Quaranta y Av. San Martín<br>         <b>Tipo:</b> Colision         </div>`)[0];
+                popup_931bbc27c2369dc3b698298f658c99a4.setContent(html_5f8ccfd046b0aacf0921be7bfefdeb4e);
+            
+        
+
+        marker_21408fa16bd8802aaddfb87ecbe08538.bindPopup(popup_931bbc27c2369dc3b698298f658c99a4)
+        ;
+
+        
+    
+    
+                marker_21408fa16bd8802aaddfb87ecbe08538.setIcon(icon_3e63ac303e0bd4188225cf6a088b7049);
+            
+    
+            var marker_0e23d5e9e1f6e24cf6b1f93649b1500a = L.marker(
+                [-27.371, -55.895],
+                {
+}
+            ).addTo(map_c56bcc46122729a72db835a8c4d8c9ca);
+        
+    
+            var icon_0efe6fc2a7eaee82ed5eab2b0c1f5e44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4cd8989bdbfe12fcac9f29cec03c74ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0cd151f0c3a0d5c124c723ce9a534026 = $(`<div id="html_0cd151f0c3a0d5c124c723ce9a534026" style="width: 100.0%; height: 100.0%;">         <b>Hotspot #2</b><br>         <b>ID:</b> #3<br>         <b>Ubicación:</b> Av. Uruguay y Av. Mitre<br>         <b>Tipo:</b> Vuelco         </div>`)[0];
+                popup_4cd8989bdbfe12fcac9f29cec03c74ad.setContent(html_0cd151f0c3a0d5c124c723ce9a534026);
+            
+        
+
+        marker_0e23d5e9e1f6e24cf6b1f93649b1500a.bindPopup(popup_4cd8989bdbfe12fcac9f29cec03c74ad)
+        ;
+
+        
+    
+    
+                marker_0e23d5e9e1f6e24cf6b1f93649b1500a.setIcon(icon_0efe6fc2a7eaee82ed5eab2b0c1f5e44);
+            
+    
+            var marker_0ed5de89a1532ab2713c07f73d314a1f = L.marker(
+                [-27.3712, -55.8952],
+                {
+}
+            ).addTo(map_c56bcc46122729a72db835a8c4d8c9ca);
+        
+    
+            var icon_82a07b05375807ae36fea7e0dd138f74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef6655dd2b77a9571db90400f75cd4df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad061e9a09a3c82a131b30535595cd25 = $(`<div id="html_ad061e9a09a3c82a131b30535595cd25" style="width: 100.0%; height: 100.0%;">         <b>Hotspot #2</b><br>         <b>ID:</b> #4<br>         <b>Ubicación:</b> Av. Uruguay y Av. Mitre<br>         <b>Tipo:</b> Colision         </div>`)[0];
+                popup_ef6655dd2b77a9571db90400f75cd4df.setContent(html_ad061e9a09a3c82a131b30535595cd25);
+            
+        
+
+        marker_0ed5de89a1532ab2713c07f73d314a1f.bindPopup(popup_ef6655dd2b77a9571db90400f75cd4df)
+        ;
+
+        
+    
+    
+                marker_0ed5de89a1532ab2713c07f73d314a1f.setIcon(icon_82a07b05375807ae36fea7e0dd138f74);
+            
+    
+            var marker_7f7f7c1370c4a5444aed4c7f09f7cd1b = L.marker(
+                [-27.401, -55.932],
+                {
+}
+            ).addTo(map_c56bcc46122729a72db835a8c4d8c9ca);
+        
+    
+            var icon_ac82ab67f1439f992b1853ddd8508c31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a1372bfc6b40ee91b0ad14eecc20bba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58a2aff69be38ecf52977a972f662694 = $(`<div id="html_58a2aff69be38ecf52977a972f662694" style="width: 100.0%; height: 100.0%;">         Siniestro Aislado (Ruido)<br>         <b>ID:</b> #5<br>         <b>Ubicación:</b> Av. Quaranta y Av. Jauretche<br>         <b>Tipo:</b> Peaton         </div>`)[0];
+                popup_9a1372bfc6b40ee91b0ad14eecc20bba.setContent(html_58a2aff69be38ecf52977a972f662694);
+            
+        
+
+        marker_7f7f7c1370c4a5444aed4c7f09f7cd1b.bindPopup(popup_9a1372bfc6b40ee91b0ad14eecc20bba)
+        ;
+
+        
+    
+    
+                marker_7f7f7c1370c4a5444aed4c7f09f7cd1b.setIcon(icon_ac82ab67f1439f992b1853ddd8508c31);
+            
+    
+            var heat_map_b3ea9ca9445a9d7275dfc115b34b3d49 = L.heatLayer(
+                [[-27.398, -55.918], [-27.3982, -55.9182], [-27.371, -55.895], [-27.3712, -55.8952], [-27.401, -55.932]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 10,
+}
+            );
+        
+    
+            heat_map_b3ea9ca9445a9d7275dfc115b34b3d49.addTo(map_c56bcc46122729a72db835a8c4d8c9ca);
+        
+</script>
+</html>

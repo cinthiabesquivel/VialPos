@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   db:
@@ -7,12 +6,27 @@ services:
     restart: always
     environment:
       POSTGRES_DB: vialpos_db
-      POSTGRES_USER: postgres
+      POSTGRES_USER: postgresreco
       POSTGRES_PASSWORD: postgres_password
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=vialpos_db
+      - DB_USER=postgresreco
+      - DB_PASSWORD=postgres_password
+    depends_on:
+      - db
 
 volumes:
   postgres_data:

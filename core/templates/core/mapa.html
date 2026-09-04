@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa de Siniestros - VialPos</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map { height: 100vh; width: 100%; margin: 0; padding: 0; }
+        body { margin: 0; padding: 0; }
+        .btn-cargar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            background: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'registrar_siniestro_manual' %}" class="btn-cargar">➕ Cargar Siniestro</a>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-27.3671, -55.8961], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        {% for s in siniestros %}
+            {% if s.latitud and s.longitud %}
+                L.marker([{{ s.latitud|stringformat:"f" }}, {{ s.longitud|stringformat:"f" }}]).addTo(map)
+                  .bindPopup("<b>{{ s.tipo_siniestro }}</b><br>Ubicación: {{ s.calle_1 }}<br>Origen: <b>{{ s.origen }}</b>");
+            {% endif %}
+        {% endfor %}
+    </script>
+</body>
+</html>

@@ -1,4 +1,6 @@
-id,fecha_hora,calle_1,calle_2,latitud,longitud,tipo_siniestro,gravedad
-1,2026-08-10 08:30:00,Av. Uruguay,Av. Quaranta,-27.3985,-55.9012,Colision,Moderado
-2,2026-08-12 19:15:00,Av. Corrientes,Av. Centenario,-27.3681,-55.8964,Atropello,Grave
-3,2026-08-15 14:00:00,Av. San Martin,Av. Urquiza,-27.3750,-55.9120,Colision,Leve
+id,calle_1,calle_2,latitud,longitud,tipo_siniestro,gravedad
+1,Av. Quaranta,Av. San Martín,-27.3980,-55.9180,Colision,Grave
+2,Av. Quaranta,Av. San Martín,-27.3982,-55.9182,Colision,Leve
+3,Av. Uruguay,Av. Mitre,-27.3710,-55.8950,Vuelco,Grave
+4,Av. Uruguay,Av. Mitre,-27.3712,-55.8952,Colision,Leve
+5,Av. Quaranta,Av. Jauretche,-27.4010,-55.9320,Peaton,Fatal
